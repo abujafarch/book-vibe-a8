@@ -9,6 +9,7 @@ import {
 import Home from './components/Home/Home';
 import Body from './components/Body/Body';
 import BookReview from './components/BookReview/BookReview';
+import ListedBooks from './components/ListedBooks/ListedBooks';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: '/book-review',
         element: <BookReview></BookReview>
+      },
+      {
+        path:'/listed-books',
+        element: <ListedBooks></ListedBooks>
       }
     ]
   },

@@ -1,11 +1,13 @@
 const BookReview = () => {
     return (
         <div className="hero">
-            <div className="hero-content flex-col lg:flex-row gap-10 items-start">
+            <div className="hero-content flex-col h-full lg:flex-row gap-10 items-start w-full p-0">
 
-                <img src="https://i.ibb.co/HNV9gsh/pngwing-1.png" className="bg-[#1313130D] p-7 md:p-[72px] flex-1 flex justify-center rounded-2xl" />
+                <div className="lg:w-[49%] h-full flex justify-center items-center bg-[#1313130D] p-7 md:p-[72px] rounded-2xl">
+                    <img src="https://i.ibb.co/HNV9gsh/pngwing-1.png" className="w-full"/>
+                </div>
 
-                <div className="">
+                <div className="lg:w-[51%]">
                     <h1 className="text-[#131313] text-3xl sm:text-[40px] font-bold mb-4 font-playfair">The Book title will be here</h1>
                     <p className="text-[#131313CC] font-work text-xl font-medium">By: Author Name here</p>
                     <hr className="my-4" />
