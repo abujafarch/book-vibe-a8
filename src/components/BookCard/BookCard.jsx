@@ -7,13 +7,13 @@ const BookCard = ({book}) => {
                 <img src={image} className='max-w-[110px]' />
             </div>
             <div className="mt-6">
-                <div className='flex gap-4 mb-4'>
+                <div className='flex gap-4 mb-4 items-center'>
 
                     {
                         tags.map((tag, indx)=> <a key={indx} href="#" className='text-[#23BE0A] font-medium font-work bg-[#23BE0A0D] px-3 py-1 rounded-badge'>{tag}</a>)
                     }
                 </div>
-                <h2 className="md:text-2xl text-xl font-bold text-[#131313] mb-3">{bookName}</h2>
+                <h2 className="md:text-2xl text-xl font-bold text-[#131313] mb-3 font-playfair">{bookName}</h2>
                 <p className='font-medium text-[#131313CC]'>By : {author}</p>
                 <hr className='border-dashed my-3'/>
                 <div className="card-actions justify-between">
