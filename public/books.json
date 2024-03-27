@@ -1,0 +1,80 @@
+[
+    {
+        "bookId": 1,
+        "bookName": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "image": "https://i.ibb.co/CQHkgh4/kindpng-2193744-1.png",
+        "review": "The Great Gatsby by F. Scott Fitzgerald is a masterpiece capturing the essence of the Jazz Age. Through the enigmatic figure of Jay Gatsby, Fitzgerald explores themes of love, wealth, and the American Dream. With its lyrical prose and vivid characters, this novel remains a timeless classic.",
+        "totalPages": 180,
+        "rating": 4.5,
+        "category": "Recipe",
+        "tags": ["classic", "romance"],
+        "publisher": "Scribner",
+        "yearOfPublish": 1925
+    },
+    {
+        "bookId": 2,
+        "bookName": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "image": "https://i.ibb.co/yBWCKbX/kindpng-1064993.png",
+        "review": "To Kill a Mockingbird by Harper Lee is an unforgettable exploration of justice and morality. Set in the racially charged atmosphere of the Deep South, the novel follows young Scout Finch as she learns about empathy and prejudice. Lee's narrative is both powerful and poignant, leaving a lasting impact.",
+        "totalPages": 324,
+        "rating": 4.8,
+        "category": "Fiction",
+        "tags": ["classic", "Southern"],
+        "publisher": "J. B. Lippincott & Co.",
+        "yearOfPublish": 1960
+    },
+    {
+        "bookId": 3,
+        "bookName": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "image": "https://i.ibb.co/WfQYQCc/kindpng-81724-1.png",
+        "review": "The Catcher in the Rye by J.D. Salinger is a timeless portrayal of teenage angst and alienation. Through the eyes of Holden Caulfield, Salinger captures the struggles of adolescence with honesty and wit. This novel continues to resonate with readers, offering insights into the complexities of growing up.",
+        "totalPages": 224,
+        "rating": 4.3,
+        "category": "Life Hacks",
+        "tags": ["classic", "adolescence"],
+        "publisher": "Little, Brown and Company",
+        "yearOfPublish": 1951
+    },
+    {
+        "bookId": 4,
+        "bookName": "The 1984",
+        "author": "George Orwell",
+        "image": "https://i.ibb.co/n7bKRCp/kindpng-5624060-1.png",
+        "review": "1984 by George Orwell is a chilling dystopian vision that remains relevant today. Orwell's portrayal of a totalitarian regime and its manipulation of truth and language is hauntingly prescient. Through the character of Winston Smith, Orwell warns of the dangers of unchecked power and surveillance.",
+        "totalPages": 328,
+        "rating": 4.6,
+        "category": "Fiction",
+        "tags": ["dystopian", "political"],
+        "publisher": "Secker & Warburg",
+        "yearOfPublish": 1949
+    },
+    {
+        "bookId": 5,
+        "bookName": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "image": "https://i.ibb.co/rwY819L/kindpng-7318921.png",
+        "review": "Pride and Prejudice by Jane Austen is a delightful comedy of manners with timeless appeal. Set in Regency-era England, the novel follows the spirited Elizabeth Bennet as she navigates love and social conventions. Austen's sharp wit and keen observation of human nature make this novel a true classic.",
+        "totalPages": 279,
+        "rating": 4.7,
+        "category": "Short Story",
+        "tags": ["classic", "romance"],
+        "publisher": "T. Egerton, Whitehall",
+        "yearOfPublish": 1813
+    },
+    {
+        "bookId": 6,
+        "bookName": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "image": "https://i.ibb.co/BgvgnQq/kindpng-4945926-1.png",
+        "review": "The Hobbit by J.R.R. Tolkien is a captivating adventure in a fantastical world. Follow Bilbo Baggins as he embarks on a journey with dwarves to reclaim their homeland from the fearsome dragon Smaug. Tolkien's richly imagined universe and engaging storytelling make this novel a timeless classic of fantasy literature.",
+        "totalPages": 310,
+        "rating": 4.9,
+        "category": "Fantasy",
+        "tags": ["epic", "adventure"],
+        "publisher": "George Allen & Unwin",
+        "yearOfPublish": 1937
+    }
+]
