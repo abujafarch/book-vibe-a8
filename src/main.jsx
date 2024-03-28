@@ -31,16 +31,6 @@ const router = createBrowserRouter([
       {
         path: '/book-review/:bookId',
         loader: ()=>fetch('/booksData.json'),
-        // loader: async ({ params }) => {
-        //   const booksData = async (url = '/booksData.json') => {
-        //     const res = await fetch(url);
-        //     const data = await res.json()
-        //     return data
-        //   }
-        //   const bookId = parseInt(params.bookId)
-        //   const loadedData = await booksData()
-        //   return [loadedData, bookId]
-        // },
         element: <BookReview></BookReview>
       },
       {
