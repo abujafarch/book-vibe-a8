@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Vision = () => {
     return (
         <div className="flex justify-center items-center flex-col gap-5">

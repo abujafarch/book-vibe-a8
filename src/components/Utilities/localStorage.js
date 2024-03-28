@@ -47,7 +47,7 @@ export const setWishListsItems = (book) => {
     }
     else{
         wishBooks.push(book)
-        toast.success('Successfully added to Read Books')
+        toast.success('Successfully added to Wishlist')
     }
     
     // console.log(books)

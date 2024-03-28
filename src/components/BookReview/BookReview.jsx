@@ -1,11 +1,12 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { setItems, setWishListsItems } from "../Utilities/localStorage";
 
 const BookReview = () => {
-    const [booksData, bookId] = useLoaderData()
+    const booksData = useLoaderData()
+    const {bookId} = useParams()
     // console.log(booksData, bookId)
-    const bookInArray = booksData.filter((book) => book.bookId === bookId)
-    const { bookName, author, image, review, totalPages, rating, category, publisher, yearOfPublish, tags } = bookInArray[0]
+    const bookInArray = booksData.find((book) => book.bookId == bookId)
+    const { bookName, author, image, review, totalPages, rating, category, publisher, yearOfPublish, tags } = bookInArray
 
     const handleToListed = (book) =>{
         setItems(book)
@@ -58,8 +59,8 @@ const BookReview = () => {
                         </tr>
                     </table>
                     <div className="flex gap-4 mt-6">
-                        <button onClick={()=>{handleToListed(bookInArray[0])}} className="border-[1px] rounded-lg px-7 py-3 text-[#131313] font-semibold text-lg">Read</button>
-                        <button onClick={()=>{handleToWishList(bookInArray[0])}} className="bg-[#50B1C9] rounded-lg px-7 py-3 text-white font-semibold text-lg">Wishlist</button>
+                        <button onClick={()=>{handleToListed(bookInArray)}} className="border-[1px] rounded-lg px-7 py-3 text-[#131313] font-semibold text-lg">Read</button>
+                        <button onClick={()=>{handleToWishList(bookInArray)}} className="bg-[#50B1C9] rounded-lg px-7 py-3 text-white font-semibold text-lg">Wishlist</button>
                     </div>
                 </div>
 

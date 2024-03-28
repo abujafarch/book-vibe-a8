@@ -20,9 +20,9 @@ const TriangleBar = (props) => {
 
 export default function App() {
     return (
-        <div className='w-full bg-[#13131308] rounded-3xl p-20'>
+        <div className='w-full bg-[#13131308] rounded-3xl p-5'>
             <BarChart
-                width={1000}
+                width={1100}
                 height={300}
                 data={data}
                 margin={{
@@ -32,7 +32,7 @@ export default function App() {
                     bottom: 5,
                 }}
             >
-                <CartesianGrid strokeDasharray="3 3" />
+                <CartesianGrid strokeDasharray="3 3"/>
                 <XAxis dataKey="bookName" />
                 <YAxis />
                 <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>

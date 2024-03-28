@@ -13,7 +13,6 @@ import ListedBooks from './components/ListedBooks/ListedBooks';
 import ReadBooks from './components/ListedBooks/ReadBooks';
 import WishlistBooks from './components/ListedBooks/WishlistBooks';
 import PageToRead from './components/PageToRead/PageToRead';
-import '../public/books.json'
 import { Toaster } from 'react-hot-toast';
 import NotFound from './NotFound/NotFound';
 import About from './components/About/About';
@@ -31,16 +30,17 @@ const router = createBrowserRouter([
       },
       {
         path: '/book-review/:bookId',
-        loader: async ({ params }) => {
-          const booksData = async (url = '../public/books.json') => {
-            const res = await fetch(url);
-            const data = await res.json()
-            return data
-          }
-          const bookId = parseInt(params.bookId)
-          const loadedData = await booksData()
-          return [loadedData, bookId]
-        },
+        loader: ()=>fetch('/booksData.json'),
+        // loader: async ({ params }) => {
+        //   const booksData = async (url = '/booksData.json') => {
+        //     const res = await fetch(url);
+        //     const data = await res.json()
+        //     return data
+        //   }
+        //   const bookId = parseInt(params.bookId)
+        //   const loadedData = await booksData()
+        //   return [loadedData, bookId]
+        // },
         element: <BookReview></BookReview>
       },
       {
