@@ -1,8 +1,7 @@
 import { IoLocationOutline } from "react-icons/io5";
 import { GoPeople } from "react-icons/go";
 import { FaRegFileLines } from "react-icons/fa6";
-const ReadBook = ({ book }) => {
-    console.log(book)
+const WishlistBook = ({book}) => {
     const { bookName, author, image, review, totalPages, rating, category, publisher, yearOfPublish, tags } = book
     return (
         <div className="sm:p-6 p-3 rounded-2xl border-[1px] items-center sm:items-start flex flex-col md:flex-row gap-6">
@@ -42,4 +41,4 @@ const ReadBook = ({ book }) => {
     );
 };
 
-export default ReadBook;
+export default WishlistBook;
