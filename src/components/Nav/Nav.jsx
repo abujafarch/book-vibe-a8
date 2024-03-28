@@ -9,10 +9,12 @@ const Nav = () => {
 
             <div >
                 <div><a className="md:hidden text-2xl cursor-pointer"> <FiMenu></FiMenu> </a></div>
-                <div className="md:flex gap-8 text-[#131313CC] text-lg items-center hidden">
+                <div className="md:flex gap-4 text-[#131313CC] text-lg items-center hidden">
                     <NavLink to='/'>Home</NavLink>
                     <NavLink to='/listed-books'>Listed Books</NavLink>
                     <NavLink to='/pages-to-read'>Pages to Read</NavLink>
+                    <NavLink to='/about'>About</NavLink>
+                    <NavLink to='/vision'>Vision</NavLink>
                 </div>
             </div>
 

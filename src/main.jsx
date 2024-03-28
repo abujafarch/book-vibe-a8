@@ -16,6 +16,8 @@ import PageToRead from './components/PageToRead/PageToRead';
 import '../public/books.json'
 import { Toaster } from 'react-hot-toast';
 import NotFound from './NotFound/NotFound';
+import About from './components/About/About';
+import Vision from './components/About/Vision';
 
 const router = createBrowserRouter([
   {
@@ -58,6 +60,14 @@ const router = createBrowserRouter([
       {
         path: '/pages-to-read',
         element: <PageToRead></PageToRead>
+      },
+      {
+        path:'/about',
+        element:<About></About>
+      },
+      {
+        path:'/vision',
+        element:<Vision></Vision>
       }
     ]
   },
