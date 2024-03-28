@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 // import App from './App.jsx'
 import './index.css'
@@ -13,27 +13,39 @@ import ListedBooks from './components/ListedBooks/ListedBooks';
 import ReadBooks from './components/ListedBooks/ReadBooks';
 import WishlistBooks from './components/ListedBooks/WishlistBooks';
 import PageToRead from './components/PageToRead/PageToRead';
+import '../public/books.json'
+
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
-    children:[
+    children: [
       {
-        path:'/',
+        path: '/',
         element: <Body></Body>
       },
       {
-        path: '/book-review',
+        path: '/book-review/:bookId',
+        loader:async ({ params }) => {
+          const booksData = async (url = '../public/books.json') => {
+            const res = await fetch(url);
+            const data = await res.json()
+            return data
+          }
+          const bookId = parseInt(params.bookId)
+          const loadedData = await booksData()
+          return [loadedData, bookId]
+        },
         element: <BookReview></BookReview>
       },
       {
-        path:'/listed-books',
+        path: '/listed-books',
         element: <ListedBooks></ListedBooks>,
-        children:[
+        children: [
           {
-            path:'',
-            element:<ReadBooks></ReadBooks>
+            path: '',
+            element: <ReadBooks></ReadBooks>
           },
           {
             path: 'wishlist-books',
@@ -42,7 +54,7 @@ const router = createBrowserRouter([
         ]
       },
       {
-        path:'/pages-to-read',
+        path: '/pages-to-read',
         element: <PageToRead></PageToRead>
       }
     ]
