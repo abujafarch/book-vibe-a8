@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 export const getBooksLists = () => {
     let books = [];
     const storedBooks = localStorage.getItem('books')
@@ -11,10 +12,11 @@ export const setItems = (book) => {
     const books = getBooksLists()
     const validationBook = books.find(booked=> booked.bookId === book.bookId)
     if(validationBook){
-        alert('already exists')
+        toast.error('Already added to Read Books')
     }
     else{
         books.push(book)
+        toast.success('Successfully added to Read Books')
     }
     
     // console.log(books)
@@ -37,14 +39,15 @@ export const setWishListsItems = (book) => {
     const books = getBooksLists()
     const validationBook = books.find(booked=> booked.bookId === book.bookId)
     const validationWishBook = wishBooks.find(booked=> booked.bookId === book.bookId)
-    if(validationBook ){
-        alert('already exists book lists')
+    if(validationWishBook){
+        toast.error('Already added to Wishlist')
     }
-    else if(validationWishBook){
-        alert('already exists wish lists')
+    else if(validationBook){
+        toast.error('Already added to Read Books')
     }
     else{
         wishBooks.push(book)
+        toast.success('Successfully added to Read Books')
     }
     
     // console.log(books)

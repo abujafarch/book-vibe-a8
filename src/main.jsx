@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom/client'
 // import App from './App.jsx'
 import './index.css'
@@ -14,12 +14,14 @@ import ReadBooks from './components/ListedBooks/ReadBooks';
 import WishlistBooks from './components/ListedBooks/WishlistBooks';
 import PageToRead from './components/PageToRead/PageToRead';
 import '../public/books.json'
-
+import { Toaster } from 'react-hot-toast';
+import NotFound from './NotFound/NotFound';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    errorElement:<NotFound></NotFound>,
     children: [
       {
         path: '/',
@@ -27,7 +29,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/book-review/:bookId',
-        loader:async ({ params }) => {
+        loader: async ({ params }) => {
           const booksData = async (url = '../public/books.json') => {
             const res = await fetch(url);
             const data = await res.json()
@@ -64,5 +66,6 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <Toaster/>
   </React.StrictMode>,
 )

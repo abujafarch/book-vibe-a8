@@ -1,6 +1,7 @@
 import { IoLocationOutline } from "react-icons/io5";
 import { GoPeople } from "react-icons/go";
 import { FaRegFileLines } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 const WishlistBook = ({book}) => {
     const { bookName, author, image, review, totalPages, rating, category, publisher, yearOfPublish, tags } = book
     return (
@@ -34,7 +35,9 @@ const WishlistBook = ({book}) => {
                 <div className="flex sm:items-center sm:flex-row flex-col gap-3">
                     <button className="text-[#328EFF] font-work bg-[#328EFF26] px-3 py-2 rounded-[30px]">Category: {category}</button>
                     <button className="text-[#FFAC33] font-work bg-[#FFAC3326] px-3 py-2 rounded-[30px]">Rating: {rating}</button>
-                    <button className="text-white font-work bg-[#23BE0A] px-3 py-2 rounded-[30px]">View Details</button>
+                    <Link to={`../../book-review/${book.bookId}`}>
+                        <button className="text-white font-work bg-[#23BE0A] px-3 py-2 rounded-[30px]">View Details</button>
+                    </Link>
                 </div>
             </div>
         </div>
